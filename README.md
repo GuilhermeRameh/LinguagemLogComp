@@ -42,7 +42,7 @@ NOTA = FORA_DE_ESCALA?, {ALTURA, DIGIT, ":", DURACAO};
 
 FORA_DE_ESCALA = ("#" | "b");
 
-CONDITIONAL = ("jônico" | "dórico" | "frígio" | "lídio" | "mixolídio" | "eólio" | "locrio");
+CONDITIONAL = ("jônio" | "dórico" | "frígio" | "lídio" | "mixolídio" | "eólio" | "lócrio");
 
 ESCALA = ALTURA, CONDITIONAL;
 

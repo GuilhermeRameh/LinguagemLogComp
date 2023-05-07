@@ -1,0 +1,33 @@
+MUSICA = TITULO, ANDAMENTO, ESCALA, DIVISAO_METRICA, {COMPASSO}+, FIM_DA_MUSICA;
+
+TITULO = (LETTER | DIGIT), {LETTER | " " | DIGIT}*;
+
+ANDAMENTO = "tempo = ", {DIGIT}+;
+
+DIVISAO_METRICA = DIGIT, "/", DIGIT;
+
+COMPASSO = CLAVE?, {NOTA | PAUSA}+, ";";
+
+PAUSA = "Z:", DURACAO;
+
+LOOP = "||:", {COMPASSO}+, ":||", ;
+
+FIM_DA_MUSICA = "||";
+
+CLAVE = ("&G" | "&F");
+
+NOTA = FORA_DE_ESCALA?, {ALTURA, DIGIT, ":", DURACAO};
+
+FORA_DE_ESCALA = ("#" | "b");
+
+CONDITIONAL = ("jônio" | "dórico" | "frígio" | "lídio" | "mixolídio" | "eólio" | "lócrio");
+
+ESCALA = ALTURA, CONDITIONAL;
+
+DURACAO = "1" | "2" | "4" | "8" | "16" | "32" | "64";
+
+ALTURA = "A" | "B" | "C" | "D" | "E" | "F" | "G";
+
+LETTER = ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p"| "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z") ;
+
+DIGIT = ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9") ;
