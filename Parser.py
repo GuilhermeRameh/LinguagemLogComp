@@ -14,35 +14,33 @@ class Parser():
     def parse(self):
         @self.pg.production("musica : TITULO ANDAMENTO LETTER CONDITIONAL DIVISAO_METRICA compassos FIM_DA_MUSICA")
         def musica(p):
-            # Handle the production logic here
-            # p[0] corresponds to TITULO, p[1] to ANDAMENTO, p[2] to ESCALA, and so on.
-            return Musica(p[1], p[3], p[4])
+            print(p)
+            pass
             
 
         @self.pg.production("compassos : compasso compassos")
         def compassos(p):
-            # Handle the production logic here
-            # p[0] corresponds to compasso, p[1] to compassos
+            print(p)
             pass
 
         @self.pg.production("compasso : CLAVE notas FIM_COMPASSO")
         def compasso(p):
-            # Handle the production logic here for an empty list of compassos
+            print(p)
             pass
 
         @self.pg.production("notas : ALTURA TO_DUR DURACAO notas")
         def notas(p):
-
+            print(p)
             pass
     
         @self.pg.production("notas : PAUSA DURACAO notas")
         def pausas(p):
-
+            print(p)
             pass
 
         @self.pg.production("loop : LOOP_START compassos LOOP_END")
         def loop(p):
-
+            print(p)
             pass
 
         @self.pg.error
