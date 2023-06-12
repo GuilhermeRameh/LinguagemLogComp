@@ -12,7 +12,7 @@ class Parser():
         )
 
     def parse(self):
-        @self.pg.production("musica : TITULO ANDAMENTO LETTER CONDITIONAL DIVISAO_METRICA compassos FIM_DA_MUSICA")
+        @self.pg.production("musica : TITULO ANDAMENTO LETTER CONDITIONAL DIVISAO_METRICA CLAVE compassos FIM_DA_MUSICA")
         def musica(p):
             print(p)
             pass
@@ -23,7 +23,7 @@ class Parser():
             print(p)
             pass
 
-        @self.pg.production("compasso : CLAVE notas FIM_COMPASSO")
+        @self.pg.production("compasso : notas FIM_COMPASSO")
         def compasso(p):
             print(p)
             pass
@@ -33,7 +33,7 @@ class Parser():
             print(p)
             pass
     
-        @self.pg.production("notas : PAUSA DURACAO notas")
+        @self.pg.production("notas : PAUSA TO_DUR DURACAO notas")
         def pausas(p):
             print(p)
             pass
@@ -45,7 +45,7 @@ class Parser():
 
         @self.pg.error
         def error_handle(token):
-            raise ValueError("Error parsing input. Unexpected token '{}'".format(token.gettokentype()))
+            raise ValueError("Error parsing input. Unexpected token '{}'".format(token))
 
 
     def get_parser(self):
