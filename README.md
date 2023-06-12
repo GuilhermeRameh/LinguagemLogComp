@@ -1,4 +1,4 @@
-# Linguagem de partituras musicais <img src="https://img.shields.io/static/v1?label=Etapa1&message=ToDo&color=GREEN&style=flat-square&logo=ghost"/>
+# Linguagem de partituras musicais <img src="https://img.shields.io/static/v1?label=Etapa1&message=DONE&color=GREEN&style=flat-square&logo=ghost"/>
 
 # Feito Por:
 - Guilherme Rameh
@@ -12,10 +12,10 @@
 ## ToDo's Do Projeto:
 
 1. [x] Estruturar a linguagem segundo o padrão EBNF.
-2. [ ] Utilizar as ferramentas Flex e Bison (ou semelhantes) para realizar as etapas de Análise Léxica e Sintática.
-3. [ ] Utilizar a LLVM (ou semelhantes - incluindo o próprio compilador) para implementar a sua linguagem até a fase final de compilação. Não é preciso implementar um compilador novo.
-4. [ ] Criar um exemplo de testes que demonstre as características da sua Linguagem.
-5. [ ] Montar uma apresentação com slides apresentando sua linguagem (Motivação, Características, Curiosidades e Exemplos). Colocar no Git.
+2. [x] Utilizar as ferramentas Flex e Bison (ou semelhantes) para realizar as etapas de Análise Léxica e Sintática.
+3. [x] Utilizar a LLVM (ou semelhantes - incluindo o próprio compilador) para implementar a sua linguagem até a fase final de compilação. Não é preciso implementar um compilador novo.
+4. [x] Criar um exemplo de testes que demonstre as características da sua Linguagem.
+5. [x] Montar uma apresentação com slides apresentando sua linguagem (Motivação, Características, Curiosidades e Exemplos). Colocar no Git.
 
 ## EBNF:
 
@@ -78,3 +78,13 @@ C jônico
 ### EXPLICADA:
 
 ![Alt text](./Paint.png)
+
+
+## Instruções:
+
+Para rodar o programa de exemplo (Brilha Brilha Estrelinha), basta rodar o arquivo `main.py`, sem modificações.
+Para modificar o exemplo, é necessário mudar, dentro do mesmo arquivo, a string denominada `text_input`, na função `main`.
+
+## Apresentação:
+
+Os slides para a apresentação foram colocados aqui no Github também, e estão denominados como "PP_Linguagem_Gui".
